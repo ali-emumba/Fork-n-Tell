@@ -1,0 +1,62 @@
+/* Initial styles for larger screens */
+.signin-page {
+  display: flex;
+  height: 100vh;
+  color: #03254a;
+}
+
+.signin-page.welcome-back {
+  font-size: 1.25rem;
+}
+
+.signin-page .signin-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  position: relative; /* For stacking in smaller screens */
+  z-index: 2; /* Ensure the form stays above the image */
+}
+
+.signin-page .illustration-container {
+  flex: 1;
+  background-color: antiquewhite;
+  position: relative; /* Keep the image positioned correctly */
+}
+
+.signin-page .illustration-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the container */
+}
+
+@media screen and (max-width: 1000px) {
+  .signin-page {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .signin-page .signin-container {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    max-width: 90%;
+    border-radius: 12px 6px;
+    overflow: hidden;
+  }
+
+  .signin-page .illustration-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+}

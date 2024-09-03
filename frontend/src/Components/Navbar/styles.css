@@ -1,0 +1,26 @@
+.navbar {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #03254a;
+  color: white;
+  padding: 10px 20px;
+  height: 60px;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .menu-button {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.navbar .drawer-menu p {
+  margin: 20px 0;
+  font-size: 1.25rem;
+  cursor: pointer;
+}

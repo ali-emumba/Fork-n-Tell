@@ -1,0 +1,23 @@
+.homepage {
+  padding: 3rem 2rem;
+  min-height: calc(100vh - 60px);
+  background-color: #f0f2f5;
+}
+
+.homepage .content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.homepage .card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+h2 {
+  color: #03254a;
+  margin-bottom: 20px;
+}

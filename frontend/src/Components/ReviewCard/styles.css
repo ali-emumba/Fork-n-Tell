@@ -1,0 +1,48 @@
+.review-card {
+  width: 300px;
+  min-height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.review-card .review-header {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+.review-card .review-ratings {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-card h3 {
+  margin: 0;
+}
+
+.review-card p {
+  color: #666;
+}
+
+.review-card .review-price {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.review-card .review-dishes {
+  margin: 10px 0;
+  font-weight: 500;
+  color: #333;
+}
+
+.review-card .review-date {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.75rem;
+  color: #999;
+}

@@ -1,0 +1,49 @@
+.floating-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.fork-icon {
+  position: absolute;
+  z-index: 10;
+}
+
+.spinning-text {
+  position: absolute;
+  font-size: 14px;
+  color: #6a704c;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  animation: spin 5s linear infinite;
+}
+
+.floating-icon:hover .spinning-text {
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.floating-icon:hover {
+  transform: scale(1.1);
+}
