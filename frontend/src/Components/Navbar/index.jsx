@@ -8,7 +8,7 @@ import { logoutUser } from "../../services/authServices";
 const NavLinks = [
   {
     title: "Home",
-    URL: "/",
+    URL: "/home",
   },
   {
     title: "Add Review",

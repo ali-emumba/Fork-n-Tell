@@ -10,6 +10,7 @@ import SignUpPage from "./Pages/SignUpPage";
 import ProtectedRoute from "./ProtectedRoute";
 import HomePage from "./Pages/HomePage";
 import RootLayout from "./RootLayout";
+import Butt from "./Pages/ButtPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route element={<ProtectedRoute />}>
           <Route element={<RootLayout />}>
             <Route path="/home" element={<HomePage />} />
+            <Route path="butt" element={<Butt />} />
           </Route>
         </Route>
 
