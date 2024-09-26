@@ -6,6 +6,8 @@ const app = express();
 app.use(
   cors({
     origin: process.env.CORS_ORIGIN,
+    allowedHeaders:
+      "Origin, X-Requested-With, Content-Type, Accept, Authorization",
     credentials: true,
   })
 );
