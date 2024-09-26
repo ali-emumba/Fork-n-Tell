@@ -19,8 +19,16 @@
   color: white;
 }
 
-.navbar .drawer-menu p {
-  margin: 20px 0;
-  font-size: 1.25rem;
+.drawer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-links {
+  /* margin: 20px 0; */
+  font-size: 1rem;
   cursor: pointer;
+  text-decoration: none;
+  color: #03254a;
 }

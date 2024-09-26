@@ -2,6 +2,22 @@ import React, { useState } from "react";
 import { MenuOutlined } from "@ant-design/icons";
 import { Drawer, Button } from "antd";
 import "./styles.css";
+import { Link } from "react-router-dom";
+
+const NavLinks = [
+  {
+    title: "Home",
+    URL: "/",
+  },
+  {
+    title: "Add Review",
+    URL: "/add-review",
+  },
+  {
+    title: "Butt.png",
+    URL: "/butt",
+  },
+];
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
@@ -28,11 +44,14 @@ const Navbar = () => {
         placement="right"
         onClose={onClose}
         visible={visible}
-        className="drawer-menu"
       >
-        <p>Home</p>
-        <p>Reviews</p>
-        <p>Contact Us</p>
+        <div className="drawer-menu">
+          {NavLinks.map((link) => (
+            <Link to={link.URL} className="nav-links">
+              {link.title}
+            </Link>
+          ))}
+        </div>
       </Drawer>
     </div>
   );
