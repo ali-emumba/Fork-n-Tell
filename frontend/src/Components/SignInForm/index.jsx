@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import "./styles.css";
 import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from "../../services/authServices";
+import { toast } from "react-toastify";
 
 const SignInForm = () => {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ const SignInForm = () => {
       navigate("/home");
     } catch (error) {
       console.log(error);
+      toast.error("Invalid email or password");
     }
   };
 
