@@ -57,7 +57,12 @@ const Navbar = () => {
         icon={<MenuOutlined />}
         onClick={showDrawer}
       />
-      <Drawer title="Menu" placement="right" onClose={onClose} open={visible}>
+      <Drawer
+        title="Menu"
+        placement="right"
+        onClose={onClose}
+        visible={visible}
+      >
         <div className="drawer-menu">
           {NavLinks.map((link, i) => {
             if (link.title === "Logout") {
