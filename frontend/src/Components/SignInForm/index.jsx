@@ -23,7 +23,7 @@ const SignInForm = () => {
         data.email,
         data.password
       );
-      console.log(accessToken, refreshToken, user);
+      console.log(accessToken, refreshToken);
       localStorage.setItem("accessToken", accessToken);
       localStorage.setItem("refreshToken", refreshToken);
       localStorage.setItem("user", JSON.stringify(user));
