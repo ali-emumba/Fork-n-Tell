@@ -26,7 +26,7 @@ const SignInForm = () => {
       localStorage.setItem("accessToken", accessToken);
       localStorage.setItem("refreshToken", refreshToken);
       localStorage.setItem("user", JSON.stringify(user));
-      navigate("/");
+      navigate("/home");
     } catch (error) {
       console.log(error);
     }
