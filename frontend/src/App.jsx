@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import SignInPage from "./Pages/SignInPage";
 import SignUpPage from "./Pages/SignUpPage";
 import ProtectedRoute from "./ProtectedRoute";
@@ -18,6 +23,8 @@ function App() {
             <Route path="/" element={<HomePage />} />
           </Route>
         </Route>
+
+        <Route path="*" element={<Navigate to={"/signin"} />} />
       </Routes>
     </Router>
   );
