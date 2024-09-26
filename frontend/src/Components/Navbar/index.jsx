@@ -26,7 +26,7 @@ const NavLinks = [
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
-  const naigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleLogout = async () => {
     try {
@@ -34,7 +34,7 @@ const Navbar = () => {
       localStorage.removeItem("accessToken");
       localStorage.removeItem("refreshToken");
       localStorage.removeItem("user");
-      naigate("/signin");
+      navigate("/signin");
     } catch (error) {
       console.error(error);
     }
@@ -57,12 +57,7 @@ const Navbar = () => {
         icon={<MenuOutlined />}
         onClick={showDrawer}
       />
-      <Drawer
-        title="Menu"
-        placement="right"
-        onClose={onClose}
-        visible={visible}
-      >
+      <Drawer title="Menu" placement="right" onClose={onClose} open={visible}>
         <div className="drawer-menu">
           {NavLinks.map((link, i) => {
             if (link.title === "Logout") {

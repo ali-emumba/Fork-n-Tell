@@ -20,7 +20,7 @@ function App() {
 
         <Route element={<ProtectedRoute />}>
           <Route element={<RootLayout />}>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/home" element={<HomePage />} />
           </Route>
         </Route>
 
