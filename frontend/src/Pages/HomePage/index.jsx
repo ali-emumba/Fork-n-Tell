@@ -76,7 +76,7 @@ const HomePage = () => {
         <h2>Latest Restaurant Reviews</h2>
         <div className="card-list">
           {reviews.map((review, index) => (
-            <ReviewCard review={review} />
+            <ReviewCard review={review} key={index} />
           ))}
         </div>
       </div>

@@ -46,8 +46,8 @@ const Navbar = () => {
         visible={visible}
       >
         <div className="drawer-menu">
-          {NavLinks.map((link) => (
-            <Link to={link.URL} className="nav-links">
+          {NavLinks.map((link, i) => (
+            <Link to={link.URL} className="nav-links" key={i}>
               {link.title}
             </Link>
           ))}

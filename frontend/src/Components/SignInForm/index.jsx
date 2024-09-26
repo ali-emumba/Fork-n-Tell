@@ -2,17 +2,34 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import "./styles.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { loginUser } from "../../services/authServices";
 
 const SignInForm = () => {
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data); // Handle form submission here
+  const onSubmit = async (data, e) => {
+    e.preventDefault();
+
+    try {
+      const { accessToken, refreshToken, user } = await loginUser(
+        data.email,
+        data.password
+      );
+      console.log(accessToken, refreshToken, user);
+      localStorage.setItem("accessToken", accessToken);
+      localStorage.setItem("refreshToken", refreshToken);
+      localStorage.setItem("user", JSON.stringify(user));
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const fieldVariants = {
